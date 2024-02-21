@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Online Quiz Maker</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        margin: 0;
+        padding: 0;
+    }
+    header {
+        background-color: #333;
+        color: #fff;
+        padding: 10px 0;
+        text-align: center;
+    }
+    nav {
+        background-color: #444;
+        color: #fff;
+        padding: 10px 0;
+        text-align: center;
+    }
+    nav a {
+        color: #fff;
+        text-decoration: none;
+        margin: 0 10px;
+    }
+    section {
+        padding: 20px;
+        text-align: center;
+    }
+    button {
+        background-color: #333;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    form {
+        max-width: 500px;
+        margin: 0 auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+    }
+    label {
+        display: block;
+        margin-bottom: 10px;
+    }
+    input[type="text"], input[type="password"], select {
+        width: calc(100% - 22px);
+        padding: 10px;
+        margin: 5px 0 15px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+    }
+    input[type="submit"] {
+        width: 100%;
+    }
+    .quiz-question {
+        max-width: 500px;
+        margin: 0 auto;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 5px;
+    }
+    .options label {
+        display: block;
+        margin-bottom: 10px;
+    }
+</style>
+</head>
+<body>
+<header>
+    <h1>Online Quiz Maker</h1>
+</header>
+<nav>
+    <a href="#">Home</a>
+    <a href="#">Create Quiz</a>
+    <a href="#">Take Quiz</a>
+    <a href="#">Quiz Listing</a>
+    <a href="#">Login</a>
+    <a href="#">Register</a>
+</nav>
+<section>
+    <h2>Welcome to the Online Quiz Maker</h2>
+    <p>Please select an option from the navigation menu.</p>
+</section>
+
+<!-- Quiz Creation Form -->
+<section>
+    <form id="quizForm">
+        <h2>Create Quiz</h2>
+        <label for="question">Question:</label>
+        <input type="text" id="question" name="question" required>
+        <label for="option1">Option 1:</label>
+        <input type="text" id="option1" name="option1" required>
+        <label for="option2">Option 2:</label>
+        <input type="text" id="option2" name="option2" required>
+        <label for="option3">Option 3:</label>
+        <input type="text" id="option3" name="option3" required>
+        <label for="option4">Option 4:</label>
+        <input type="text" id="option4" name="option4" required>
+        <label for="correctAnswer">Correct Answer:</label>
+        <select id="correctAnswer" name="correctAnswer" required>
+            <option value="option1">Option 1</option>
+            <option value="option2">Option 2</option>
+            <option value="option3">Option 3</option>
+            <option value="option4">Option 4</option>
+        </select>
+        <input type="submit" value="Submit Quiz">
+    </form>
+</section>
+
+<!-- Quiz Question -->
+<section class="quiz-question">
+    <h2>Question 1</h2>
+    <p>What is the capital of France?</p>
+    <div class="options">
+        <input type="radio" id="option1" name="answer" value="option1">
+        <label for="option1">London</label>
+        <input type="radio" id="option2" name="answer" value="option2">
+        <label for="option2">Paris</label>
+        <input type="radio" id="option3" name="answer" value="option3">
+        <label for="option3">Berlin</label>
+        <input type="radio" id="option4" name="answer" value="option4">
+        <label for="option4">Rome</label>
+    </div>
+    <button>Next Question</button>
+</section>
+
+<!-- Quiz Results -->
+<section>
+    <h2>Quiz Results</h2>
+    <p>Your score: 8 out of 10</p>
+    <p>Correct Answers:</p>
+    <ul>
+        <li>Question 1: Paris</li>
+        <li>Question 2: Rome</li>
+        <!-- Add correct answers dynamically -->
+    </ul>
+</section>
+
+<!-- Quiz Listing -->
+<section>
+    <h2>Quiz Listing</h2>
+    <ul>
+        <li>Quiz 1</li>
+        <li>Quiz 2</li>
+        <!-- Add quizzes dynamically -->
+    </ul>
+</section>
+
+<!-- Login Form -->
+<section>
+    <form id="loginForm">
+        <h2>Login</h2>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <input type="submit" value="Login">
+    </form>
+</section>
+
+<!-- Register Form -->
+<section>
+    <form id="registerForm">
+        <h2>Register</h2>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <input type="submit" value="Register">
+    </form>
+</section>
+</body>
+</html>
+
